@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&display=swap');
+@import url('loggin.css');
+@import url('util.css');
+
+/* datattable */
+@import url('//cdn.datatables.net/1.10.2/css/jquery.dataTables.css');
+ td.details-control {
+    background: url('http://www.datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('http://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
+}
+
+figure{
+	top: -45px;
+	left: 0px;
+	height: 130px;
+	
+}
+
+figure img{
+	top: 0px;
+	left: 0px;
+	width: 20%;
+	height: auto;
+}
+
+figure figcaption{
+	top: -97px;
+	left: 20%;
+	width: 80%;
+	height: auto;
+	position: relative;
+	border-bottom: 1px solid green;
+}
+figure figcaption h2 p{
+	color: black;
+	position: relative;
+	top: 0px;
+	left: 10%;
+	font-family: 'Frank Ruhl Libre', serif;
+	font-size: 1.3em;
+	font-weight: bolder;
+	text-shadow: 2px 3px 8px rgba(56,79,89,0.72);
+	width: 60%;
+}
+.boton{
+	position: absolute;
+	top:2%;
+	left: 85%;
+	width: min-content;	
+}
+
+.card-body .texcto{
+	position: absolute;
+	top: 120px;
+	left: 25%;
+}
+.card-body .texcto p{
+	top: 12px;
+	color: #876868;
+	position: relative;
+}
+
+/* genero */
+form .form-row .tratamiento,
+form .form-row .genero{
+	border: 1px solid #CED4DA;
+	/* border: 1px solid red; */
+	width: 0px;
+	position: relative;
+	height: 38px;
+	top: 32px;
+	left:0px;
+	border-radius: 5px;
+}
+form .form-row #intputSexo{
+	position: absolute;
+	top: -100%;
+	left: 0%;
+}
+form .form-row .tratamiento .radio-Sexo,
+form .form-row .genero .radio-Sexo{
+	position: relative;
+	/* top: 15%; */
+	left: 15%;
+	vertical-align: middle;
+}
+form .form-row .tratamiento .radio-Sexo label,
+form .form-row .genero .radio-Sexo label{
+	position: relative;
+	margin-left: 5px;
+	top:-5px
+}
+
+form .idPaciente{
+	width: 100%;
+	height: auto;	
+}
+form .idPaciente #idPaciente{
+	width: 14%;
+	position: relative;
+	top: 0px;
+	left: 86%;
+}
+
+#medicamento{
+	display: none;
+}
+
+/* ocultar otro enfermedad padescan y padecimiento actual */
+.indique{
+	visibility: hidden;
+}
+
+#anteriorMedicamento{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/* vista control de meso y consentrado */
+.allMedical{
+	position: relative;
+}
+
+.allMedical #myList{
+	position: relative;
+	width: 20%;
+}
+.allMedical #myList span{
+	position: relative;
+	float: right;
+}
+.allMedical .tab-content{
+	border:1px solid rgba(116, 108, 116, 0.377);
+	position: absolute;
+	width: 79%;
+	height: auto;
+	left: 21%;
+	top: 0px;
+}
+.allMedical .tab-content .tittleUpdate{
+	position: relative;
+	width: 100%;
+}
+.allMedical .tab-content .tittleUpdate label{
+	position: relative;
+	left: 28%;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: x-large;
+	font-weight: bolder;
+}
+
+.allMedical .tab-content #profile .form-inline>div,
+.allMedical .tab-content #home .form-inline>div{
+	position: relative;
+	left: 0%;
+}
+.allMedical .tab-content #profile .form-inline,
+.allMedical .tab-content #home .form-inline{
+	position: relative;
+	width: 100%;
+}
+.allMedical .tab-content #profile .form-inline .divMeso,
+.allMedical .tab-content #home .form-inline .divMeso{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 20%;
+}
+.allMedical .tab-content #profile .form-inline .divCon label{
+	position: relative;
+	top: 0px;
+	left: 10px;
+	margin-right: 50px;
+}
+.allMedical .tab-content #home .form-inline .divMeso label{
+	position: relative;
+	top: 0px;
+	left: 20px;
+
+}
+.allMedical .tab-content #profile .form-inline .inputNumero,
+.allMedical .tab-content #home .form-inline .inputNumero{
+	width: 22%;	
+}
+.allMedical .tab-content #profile .form-inline .botones,
+.allMedical .tab-content #home .form-inline .botones{
+	width: 35%;
+	display: inline-flex;
+	position: relative;
+	top: 0%;
+	left: 0%;	
+}
+.allMedical .tab-content .form-inline .botones a{
+	position:relative;
+	left: 0%;
+	margin-left: 45px;
+}
+.frmMeso .errorSumResta{
+	color: red;	
+	position: absolute;
+	top: 36px;
+	left: -20%;
+	font-size: 0.8em;
+	width: 160%;
+	margin-bottom: 250px;
+}
+
+/* ocultar consultorio de loggin */
+.errorLoggin strong{
+	position: relative;
+	left: 25%;
+	top: 0%;
+	
+}
+form .selectH{
+	display: none;
+	
+}
+form .selectH .hideSelect{
+	text-transform: uppercase;
+}
+
+/* titulo header */
+#headerBienestar{
+	width: 100%;
+	height: auto;
+}
+#headerBienestar .divconsul{
+	width: 50%;
+	justify-content: center;
+	position: relative;
+	left: 25%;
+}
+#headerBienestar .divconsul .consul{
+	position: relative;
+	top: 10px;
+	color: whitesmoke;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+/* primera ve en consulta */
+.pagos .pagosAll{
+	position: relative;
+	left: 0%;
+
+}
+.pagos .control{
+	width: 15%;
+	position: absolute;
+	left: 82%;
+	top: 40px;
+}
+.pagos .control .noPaciente{
+	color: rgba(56,79,89,0.72);
+	margin-right: 2px;
+	font-size: 0.9em;
+}
+
+.pagos .datosPaciente{
+	position: relative;
+	top: -45px;
+}
+.pagos .datosPaciente .nombrePaciente{
+	border-bottom:1px solid rgba(159, 163, 159, 0.616);
+	position: relative;
+	width: 45%;
+	left: 35%;
+}
+.pagos .datosPaciente .nombrePaciente p{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.2em;	
+	position: relative;
+	left: 25%;
+}
+/* tabla de consulta */
+#frmConsultaDiaria .consultaTblaScroll{
+	border-bottom: 1px solid rgb(100, 105, 107);
+	position: relative;
+	width: 100%;
+	/* min-width: 100%; */
+	max-height: 18%;
+	/* overflow: hidden; */
+}
+#frmConsultaDiaria .consultaTblaScroll .form-group{
+	position: relative;
+	display: inline-block;
+	/* border: 1px solid green; */
+}
+
+/* inputs de la consulta  */
+.consultaTblaScroll .form-group .controlConsulta{
+	/* border: 1px solid black; */
+	position:relative;
+	padding:2px;
+	font-size:small;
+}
+
+/* modals mesoterapia */
+.modal-body .mesoUsar,
+.modal-body .contenedorTitulo{
+	position: relative;
+	width: 100%;	
+}
+.modal-body small{
+	color: red;
+	position: relative;
+	font-size: x-small;
+	top: 10px;
+}
+.mesoUsar label,
+.contenedorTitulo label{
+	position: relative;
+	font-size: x-large;	
+	width: 40%;
+	text-align: right;
+}
+.mesoUsar input,
+.contenedorTitulo h3{
+	text-align: center;
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	top:2px;
+	border-bottom:1px solid blue ;
+	
+}
+
+.modal-body .mesoUsar{
+	margin-top: 10px;
+}
+
+.mesoUsar input{
+	font-size: x-large;
+}
+.observacion{
+	margin-bottom: 15%;
+}
+.observacion #observ{
+	overflow: auto;
+	resize: none;
+}
+
+/* pagos */
+ #frmConsultaDiaria .pagos{
+	margin-top: 15px;
+	min-width: 100%;
+	position: relative;
+	display: none;
+}
+
+#frmConsultaDiaria .pagos .tarjeta{
+	position: absolute;
+	left: 50%;
+	top: -1%;
+}
+
+#frmConsultaDiaria .pagos .tarjeta label,
+#frmConsultaDiaria .pagos .efectivo label{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bolder;
+	text-shadow: 2px 2px 4px lightslategrey;
+} 
+/* desglose */
+.des{
+	border-bottom: 1px solid rgb(99, 92, 92);
+	margin-bottom: 15px;
+	width: 100%;
+}
+.des h2{
+	position: relative;
+	left: 35%;
+	top: 0px;
+	width: 25%;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: xx-large;
+	text-shadow: 1px 4px 5px rgb(110, 110, 110);
+}
+
+/* hacer pequeño el texto */
+.col h6{
+	font-size: smaller;
+}
+
+/* TITULO DE ENTRADAS REGISTRO/MOVIMIENTOS*/
+.tituloEntradas{
+	margin-bottom: 2%;
+	width: 100%;
+
+}
+.tituloEntradas .textoTituloEntradas{
+	position: relative;
+	top: 0px;
+	left: 40%;
+	width: 15%;
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+/* card avanzado index */
+#contenedorConsultorio{
+	width: 100%;
+}
+#contenedorConsultorio .contenedorMenuConsultrorios{
+	border: 1px solid green;
+	width: 16rem;
+	display: inline-block;
+}
+
+/* titulo reporte global */
+#tituloReporte{
+	width: 100%;
+	position: relative;
+}
+#tituloReporte p{
+	font-weight: 200;
+	font-size: xx-large;
+	
+}
+#tituloReporte p small{
+	font-weight: bolder;
+	font-size: xx-large;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+#permisoDoctor2, 
+#permisoDoctor{
+	 display: none;
+} 
