@@ -12,6 +12,11 @@ tr.shown td.details-control {
     background: url('http://www.datatables.net/examples/resources/details_close.png') no-repeat center center;
 }
 
+.viewTop{
+	position: relative;
+	margin-top: 5em;
+}
+
 figure{
 	top: -45px;
 	left: 0px;

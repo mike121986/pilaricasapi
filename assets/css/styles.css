@@ -32,6 +32,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --gris-300: #E0E0E0;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -137,9 +138,15 @@ b,
 strong {
   font-weight: bolder;
 }
-
+.smallSubtitle{
+  background-color: var(--gris-300);
+}
 small {
   font-size: 80%;
+  position: relative;
+  left:5%;
+  font-weight: bolder;
+  background-color: var(--gris-300);
 }
 
 sub,

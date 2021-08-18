@@ -176,4 +176,12 @@ class Utls{
         $_SESSION['errorLoguin'] = "NECESITAS CREDENCIALES PARA INGRESAR";
                     echo '<script>window.location="'.base_url.'"</script>';
     }
+
+    public static function rutas(){
+        require_once $_SERVER['DOCUMENT_ROOT']."/config/modeloBase.php";
+        $datos = new ModeloBase();
+        $datos -> getAll('ruta');
+
+        return $datos;
+    }
 }

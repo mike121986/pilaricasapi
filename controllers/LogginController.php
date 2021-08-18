@@ -115,7 +115,7 @@
             $idMun = Validacion::validarNumero($id);
     
             if($idMun != -1){           
-                $estado = new Usuario();
+                $estado = new Login();
                 $estado->setIdEstado($idMun);
                 $verMun = $estado->getMunModels();
                 if($verMun->num_rows>0){
@@ -152,6 +152,8 @@
                 echo 2;
             }
         }
+
+    
 
         
     }
