@@ -222,4 +222,81 @@ $(document).ready(function () {
 		})
 	})
 
+	// agregar conacto al cliente
+	$("#btn-AgregarContacto").on("click", function () {
+
+		let contador = 0;
+		var contacto = Array();
+		let registro = Array();
+		var nameContactoCustomer = emptyInput($("#nameContactoCustomer").val());
+		var emailContactoCustomer = emptyInput($("#emailContactoCustomer").val());
+		var telPrCustomer = emptyInput($("#telPrCustomer").val());
+		var telSecCustomer = emptyInput($("#telSecCustomer").val());
+
+
+		if (emailContactoCustomer == "empty") { emailContactoCustomer = "empty@empty.com" }
+		if (telSecCustomer === "empty") { telSecCustomer = '00000000' }
+
+		registro.push({ "nombre_nameContactoCustomer_30": nameContactoCustomer, "phone_telPrCustomer_12": telPrCustomer, "email_emailContactoCustomer_100": emailContactoCustomer, "phone_telSecCustomer_12": telSecCustomer })
+
+		for (var clave in registro[0]) {
+			var indice = separaTexto(clave)
+			if (registro[0][clave] === "empty") {
+				$("#" + indice[1]).css('border', '1px solid red')
+				$("." + indice[1]).html('este campo es obligatorio')
+				$("." + indice[1]).css('color', 'red')
+				contador = contador + 1;
+			} else {
+
+				var error = expRegular(indice[0], registro[0][clave]);
+				if (error != 0) {
+					let largoTexto = tamanoTxt(registro[0][clave], indice[2])
+					if (largoTexto) {
+						$("#" + indice[1]).css('border', '1px solid green')
+						$("." + indice[1]).html('correcto')
+						$("." + indice[1]).css('color', 'green')
+					} else {
+						$("#" + indice[1]).css('border', '1px solid red')
+						$("." + indice[1]).html('EXCEDE EL TAMAÑO PERMITIDO')
+						$("." + indice[1]).css('color', 'red')
+						contador = contador + 2;
+					}
+				} else {
+					$("#" + indice[1]).css('border', '1px solid red')
+					$("." + indice[1]).html('Formato Incorrecto')
+					$("." + indice[1]).css('color', 'red')
+					contador = contador + 2;
+				}
+
+			}
+		}
+
+		if (contador === 0) {
+			var data = { "data": registro };
+			var json = JSON.stringify(data);
+			$.ajax({
+				url: getAbsolutePath() + "views/layout/ajax.php",
+				method: "POST",
+				data: { "contacto": json },
+				cache: false,
+				beforeSend: function (setContacto) {
+					$('.spinnerCliente').html('<i class="fas fa-sync fa-spin"></i>');
+				},
+				success: function (setContacto) {
+
+					$('.spinnerCliente').html('');
+					if (setContacto > 3) {
+						$('#mensajeCliente').html('<div class="alert alert-danger" role="alert">No se puede agregar mas contactos a esta Cliente</div>');
+					} else {
+						$('#mensajeCliente').html('<div class="alert alert-success" role="alert">se agrego correctamente ' + setContacto + ' ITEMS</div>');
+					}
+				}
+			});
+			$("#nameContactoCustomer").val('');
+			$("#emailContactoCustomer").val('');
+			$("#telPrCustomer").val('');
+			$("#telSecCustomer").val('');
+		}
+	});
+
 });

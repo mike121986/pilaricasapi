@@ -219,7 +219,7 @@ function getAbsolutePath() {
     // var pathName = loc.pathname.substring(0, 1);
     return loc.href.substring(0, loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length));    
 }
-console.log(getAbsolutePath());
+
 function sumar(uno,dos){
   var result;
   result = (uno + dos);
@@ -351,7 +351,7 @@ function validarInput(input) {
 
 function separaTexto(texto){
   let separador = "_";
-  let limit = 2;
+  let limit = 3;
   let textoNuevo = "";
   let validarTexto = expRegular('nombre',texto)
   if(validarTexto =! 0){
@@ -359,6 +359,16 @@ function separaTexto(texto){
     return textoNuevo
   }else{
     return 0
+  }
+}
+
+function tamanoTxt(texto,length_txt){
+  let tamano = texto.length;
+
+  if(tamano>length_txt){
+    return false
+  }else{
+    return texto
   }
 }
 
